@@ -1,45 +1,64 @@
-import { Tabs } from 'expo-router';
+// app/(tabs)/home/HomeTabs.tsx
 import React from 'react';
-import { Platform } from 'react-native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import Icon from 'react-native-vector-icons/Ionicons'
+import HomeScreen from './home/index'; 
+import GalleryScreen from './gallery/index';
+import RegisterScreen from './auth';
+import {View, StyleSheet } from 'react-native';
+import Header from '@/components/Header';
 
-import { HapticTab } from '@/components/HapticTab';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+const Tab = createMaterialTopTabNavigator();
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
-
+export default function HomeTabs() {
   return (
-    <Tabs
+    <View style={styles.container}>
+     <Header/>
+      
+  <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        headerShown: false,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarStyle: Platform.select({
-          ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
-          },
-          default: {},
-        }),
-      }}>
-      <Tabs.Screen
-        name="index"
+        tabBarShowLabel: true
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Icon name="home" size={24} color={color} />
+          ),
         }}
       />
-      <Tabs.Screen
-        name="explore"
+       <Tab.Screen
+        name="Gallery"
+        component={GalleryScreen}
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => (
+            <Icon name="image" size={24} color={color} />
+          ),
         }}
       />
-    </Tabs>
+      <Tab.Screen
+        name="Auth"
+        component={RegisterScreen}
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Icon name="person-outline" size={24} color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+    </View>
+    
   );
 }
+
+
+const styles = StyleSheet.create({
+
+    container: {
+      flex: 1,
+      backgroundColor: "#f5f5f5",
+    },
+  
+})
