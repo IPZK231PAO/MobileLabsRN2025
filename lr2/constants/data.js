@@ -1,34 +1,124 @@
 export const games = [
-    {
-      id: '1',
-      title: 'Dead by Daylight',
-      price: 18,
-      discount: 70,
-      platform: 'Windows',
-      image: 'https://picsum.photos/150',
-    },
-    // Додайте інші ігри
-  ];
-  
-  export const posts = [
-    {
-      id: '1',
-      author: 'Eurogamer',
-      time: 'yesterday • 2:20 pm',
-      title: 'Florida tourist attraction sues Fortnite',
-      content: 'Coral Castle Museum...',
-      likes: 324,
-      comments: 12,
-    },
-  ];
-  
-  export const chats = [
-    {
-      id: '1',
-      name: 'Mark Dyson',
-      lastMessage: "I'm already starting to play",
-      time: '14 Jun',
-      unread: true,
-      avatar: 'https://picsum.photos/40',
-    },
-  ];
+  {
+    id: '1',
+    title: 'Dead by Daylight',
+    price: 18,
+    discount: 70,
+    platform: 'Windows',
+    image: 'https://picsum.photos/150',
+  },
+  {
+    id: '2',
+    title: 'Cyberpunk 2077',
+    price: 59,
+    discount: 30,
+    platform: 'Multiplatform',
+    image: 'https://picsum.photos/151',
+  },
+  {
+    id: '3',
+    title: 'The Witcher 3: Wild Hunt',
+    price: 39,
+    discount: 60,
+    platform: 'PS5/Xbox/PC',
+    image: 'https://picsum.photos/152',
+  },
+  {
+    id: '4',
+    title: 'Red Dead Redemption 2',
+    price: 49,
+    discount: 45,
+    platform: 'PS4/Xbox One/PC',
+    image: 'https://picsum.photos/153',
+  },
+  {
+    id: '5',
+    title: 'Elden Ring',
+    price: 69,
+    discount: 20,
+    platform: 'Multiplatform',
+    image: 'https://picsum.photos/154',
+  },
+];
+
+export const posts = [
+  {
+    id: '1',
+    author: 'Eurogamer',
+    time: 'yesterday • 2:20 pm',
+    title: 'Florida tourist attraction sues Fortnite',
+    content: 'Coral Castle Museum, a tourist attraction near Miami, is suing Fortnite maker Epic Games for trademark infringement and unfair competition.',
+    likes: 324,
+    comments: 12,
+  },
+  {
+    id: '2',
+    author: 'IGN',
+    time: '3 hours ago',
+    title: 'New Game+ mode added to Spider-Man 2',
+    content: 'Insomniac Games releases major update adding highly requested New Game+ mode and additional suits.',
+    likes: 891,
+    comments: 45,
+  },
+  {
+    id: '3',
+    author: 'Kotaku',
+    time: '5 hours ago',
+    title: 'Indie Game of the Year nominees revealed',
+    content: 'Check out the full list of nominees for this year\'s Independent Games Festival awards ceremony.',
+    likes: 456,
+    comments: 28,
+  },
+  {
+    id: '4',
+    author: 'RockPaperShotgun',
+    time: '1 day ago',
+    title: 'Valve announces Steam Deck 2',
+    content: 'New version of handheld PC will feature OLED screen and improved battery life according to latest leaks.',
+    likes: 1203,
+    comments: 167,
+  },
+];
+
+export const chats = [
+  {
+    id: '1',
+    name: 'Mark Dyson',
+    lastMessage: "I'm already starting to play",
+    time: '14 Jun',
+    unread: true,
+    avatar: 'https://picsum.photos/40',
+  },
+  {
+    id: '2',
+    name: 'SarahConnor',
+    lastMessage: "Let's team up tonight!",
+    time: '13 Jun',
+    unread: false,
+    avatar: 'https://picsum.photos/41',
+  },
+  {
+    id: '3',
+    name: 'CyberWanderer',
+    lastMessage: "Check out this new build",
+    time: '12 Jun',
+    unread: true,
+    avatar: 'https://picsum.photos/42',
+  },
+  {
+    id: '4',
+    name: 'Geralt_Rivia',
+    lastMessage: "Gwent tournament tomorrow?",
+    time: '11 Jun',
+    unread: false,
+    avatar: 'https://picsum.photos/43',
+  },
+  {
+    id: '5',
+    name: 'Lara_Croft',
+    lastMessage: "Found the secret artifact!",
+    time: '10 Jun',
+    unread: true,
+    avatar: 'https://picsum.photos/44',
+  },
+];
